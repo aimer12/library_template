@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SohuVideoCloud</title>
+<link rel="stylesheet" type="text/css" href="/static/tor_back.css" />
+</head>
+
+<body>
+	<div id = "container">
+		<div id="banner">
+			<div id="globallink">
+			<p align="left" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">welcom:{{username}}!&nbsp;&nbsp;&nbsp;&nbsp;<a href="/">quit</a></p>
+			</div>
+		</div>
+	<div id="left">
+		<div id="menu"><a>reader manage</a></div>
+		<div id="menu_down1" class="menu_down" style="display:block">
+			<ul>
+				<li><a href="/?ori=reader" target="main">add book</a></li>
+				<li>
+				<form action="/readermanage" method="GET" name="" id="G">
+					<input type="text" name='reader_id' placeholder="reader_id" />
+					<input type="submit" value='search' />
+				</form>
+				</li>
+				
+			</ul>
+		</div>
+		<div id="menu"><a>book manage</a></div>
+		<div id="menu_down2" class="menu_down" style="display:block">
+			<ul>
+				<li><a href="/?ori=book" target="main">add book</a></li>
+				<li>
+				<table class="t2">
+				<tr>
+				<form action="/bookmanage" method="GET">
+					<td>
+						<select name="_se">
+							<option value="title">title</option>
+							<option value="author">author</option>
+							<option value="pubulisher">pubulisher</option>
+						</select>
+					</td>
+					<td>
+					<input type="text" name="book">
+					</td>
+					<td>
+					<input type="submit" value="search">
+					</td>
+				</form>
+				</tr>
+				</table>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<iframe name="main" id="main" frameborder="0" width="100%" onload="this.height=main.document.body.scrollHeight">
+		</ifram>
+	</div>
+	<div id="foot">
+	<center>
+		<pre>
+			<br>
+		</pre>
+	</center>
+	</div>
+</div>
+</body>
+</html>
+		
+			
+

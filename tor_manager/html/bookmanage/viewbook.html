@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>book</title>
+  <link rel="stylesheet" type="text/css" href="/static/tor_back.css"/>
+  
+<script type="text/javascript">
+function submit_del(formid) {
+  var a = confirm('是否删除？');
+  if (a == true) {
+    var form = document.getElementById(formid);
+    form.submit(); 
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+	<h1>book</h1>
+	<center>
+		<table border='1' class='t2'>
+			<tr>
+				<td>book id:</td>
+				<td>{{book['book_id']}}</td>
+			</tr>
+			<tr>
+				<td>book title:</td>
+				<td>{{book['book_title']}}</td>
+			</tr>
+			<tr>
+				<td>author:</td>
+				<td>{{book['author']}}</td>
+			</tr>
+			<tr>
+				<td>publisher:</td>
+				<td>{{book['publisher']}}</td>
+			</tr>
+			<tr>
+				<td>price:</td>
+				<td>{{book['price']}}</td>
+			</tr>
+			<tr>
+				<td>description:</td>
+				<td>{{book['description']}}</td>
+			</tr>
+			<tr>
+				<td>on sheet:</td>
+				<td>{{book['sheet']}}</td>
+			</tr>
+			<tr>
+				<td>borrowdate:</td>
+				<td>{{book['borrowdate']}}</td>
+			</tr>
+			<tr>
+				<td>returndate:</td>
+				<td>{{book['returndate']}}</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="/bookmanage" method="GET" name="DEL{{book['book_id']}}" id="DEL{{book['book_id']}}">
+					<input type="hidden" name="_method" value="delete" />
+					<input type="hidden" name="book_id" value="{{book['book_id']}}" />
+					<a href="javascript:{}" onclick="submit_del('DEL{{book['book_id']}}')">delete</a>
+					</form>
+				</td>
+				<td>
+					<form action="/bookmanage" method="GET" name="UPDATE{{book['book_id']}}" id="UPDATE{{book['book_id']}}">
+					<input type="hidden" name="_method" value="put" />
+					<input type="hidden" name="book_id" value="{{book['book_id']}}" />
+					<input type="submit" value="update"/>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<form action='/borrowmanage' method="post" name="POST{{book['book_id']}}" id="POST{{book['book_id']}}">
+					<input type="hidden" name="bookid" value="{{book['book_id']}}" />
+					
+					<input type="text" name="readerid" size=1 /><input type='submit' value='borrow' />
+					</form>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<form action='/borrowmanage' method="DELETE" name="DELETE{{book['book_id']}}" id="DELETE{{book['book_id']}}">
+					<input type="hidden" name="_method" value="delete" />
+					<input type="hidden" name="bookid" value="{{book['book_id']}}" />
+					<input type='submit' value='return' />
+				</form>
+			</td>
+			<td>
+				<form action='/borrowmanage' method="PUT" name="PUT{{book['book_id']}}" id="PUT{{book['book_id']}}">
+					<input type="hidden" name="_method" value="put" />
+					<input type="hidden" name="bookid" value="{{book['book_id']}}" />
+					<input type='submit' value='renew' />
+				</form>
+			</td>	
+		</tr>
+			
+			
+		</table>
+	</center>
+</body>
+</html>

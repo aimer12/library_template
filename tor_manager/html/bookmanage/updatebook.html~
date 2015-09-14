@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>update book</title>
+  <link rel="stylesheet" type="text/css" href="/static/tor_back.css"/>
+  
+  <script type="text/javascript">
+  
+  function validate_required(field, alertxt)
+{
+  	with (field)
+  	{
+  		if (value==null || value=="")
+  			{alert(alertxt); return false}
+  		else
+  			{return true}
+  	}
+}
+
+function validate_form(thisform)
+{
+	with (thisform)
+	{
+		if (validate_required(book_id,"'book_id' null!")==false)
+			{book_id.focus();return false}
+		if (validate_required(book_title,"'book_title' null!")==false)
+			{book_title.focus();return false}
+		if (validate_required(addr,"'addr' Null!")==false)
+			{addr.focus();return false}
+		return true
+	}
+}
+</script>
+
+</head>
+
+<body backcolor=pink>
+	<center>
+		<h1>update book</h1>
+		<form  action="/bookmanage" method="put" >
+		<table class="t1" border="1">
+			<tr>
+				<td>book id:</td>
+				<td>{{book_id}}</td>
+				<td><input type = "hidden" name="book_id" id="book_id" value="{{book_id}}"></td>
+			</tr>
+			<tr>
+				<td>book title:</td>
+				<td><input type = "text" name="book_title" id="book_title"></td>
+			</tr>
+			<tr>
+				<td>author:</td>
+				<td><input type = "text" name="author" id="author"></td>
+			</tr>
+			<tr>
+				<td>publisher:</td>
+				<td><input type = "text" name="publisher" id="publisher"></td>
+			</tr>
+			<tr>
+				<td>address:</td>
+				<td><input type = "text" name = "addr" id="addr"></td>
+			<tr>
+				<td>price:</td>
+				<td><input type = "text" name="price" id="price"></td>
+			</tr>
+			<tr>
+				<td>description:</td>
+				<td><input type = "text" name="description" id="description"></td>
+			</tr>
+			<tr>
+				<td colspan='2' align='center'><input type='submit' value='update'><input type="reset" value="reset"></td>
+			</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>

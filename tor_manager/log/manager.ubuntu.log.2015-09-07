@@ -1,0 +1,83 @@
+2015-09-07 20:39:03,387 -bookmanage:bookmanage.py-L99-INFO: received post body: book_title=python+learn&author=ai&publisher=mingtian&addr=4-3-7&price=3.4&description=something
+2015-09-07 20:39:03,870 -web:web.py-L1908-INFO: 302 POST /bookmanage (127.0.0.1) 485.66ms
+2015-09-07 20:39:03,874 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 0.78ms
+2015-09-07 20:39:06,205 -web:web.py-L1908-INFO: 304 GET /?ori=book (127.0.0.1) 2.63ms
+2015-09-07 20:40:02,245 -bookmanage:bookmanage.py-L99-INFO: received post body: book_title=python+web&author=liyong+wangwenqiang&publisher=qinghua&addr=3-2-7&price=3.8&description=improve+your+skill
+2015-09-07 20:40:02,401 -web:web.py-L1908-INFO: 302 POST /bookmanage (127.0.0.1) 158.28ms
+2015-09-07 20:40:02,442 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 1.07ms
+2015-09-07 20:40:24,669 -web:web.py-L1908-INFO: 304 GET /?ori=book (127.0.0.1) 1.02ms
+2015-09-07 20:45:00,739 -bookmanage:bookmanage.py-L99-INFO: received post body: book_title=Introduction+to+Tornado&author=Micbael+Dory&publisher=O%27Reilly+Media&addr=4-2-3&price=23.88&description=Tornado+is+a+scalable%2C+non-blocking+web+server.
+2015-09-07 20:45:00,833 -web:web.py-L1908-INFO: 302 POST /bookmanage (127.0.0.1) 96.69ms
+2015-09-07 20:45:00,861 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 1.05ms
+2015-09-07 20:45:28,636 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=title&book=python (127.0.0.1) 81.57ms
+2015-09-07 20:46:31,634 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2 (127.0.0.1) 85.75ms
+2015-09-07 20:47:43,377 -borrowmanage:borrowmanage.py-L18-INFO: received post body: bookid=2&readerid=
+2015-09-07 20:47:43,381 -httpclient:httpclient.py-L101-ERROR: Response is not 'Success'! ErrorCode: 'NO_PARAMETER'. Info: There is no parameter 'id'!
+2015-09-07 20:47:43,424 -web:web.py-L1908-INFO: 200 POST /borrowmanage (127.0.0.1) 48.65ms
+2015-09-07 20:47:51,502 -borrowmanage:borrowmanage.py-L18-INFO: received post body: bookid=2&readerid=4
+2015-09-07 20:47:51,689 -web:web.py-L1908-INFO: 302 POST /borrowmanage (127.0.0.1) 188.35ms
+2015-09-07 20:47:51,694 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 0.70ms
+2015-09-07 20:47:57,637 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-07 20:47:57,638 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-07 20:47:57,662 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=3 (127.0.0.1) 56.90ms
+2015-09-07 20:48:03,870 -borrowmanage:borrowmanage.py-L18-INFO: received post body: bookid=3&readerid=4
+2015-09-07 20:48:03,965 -web:web.py-L1908-INFO: 302 POST /borrowmanage (127.0.0.1) 96.15ms
+2015-09-07 20:48:03,997 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 1.02ms
+2015-09-07 20:48:15,362 -web:web.py-L1496-ERROR: Uncaught exception GET /readermanage?reader_id=4 (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/readermanage?reader_id=4', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0', 'Connection': 'keep-alive', 'Referer': 'http://127.1:9997/', 'If-None-Match': '"22ba35ef4a3554e2577f8e3f9c89600239b9f8fb"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/readermanage.py", line 55, in get
+    self.render("readermanage/viewreader.html", reader = reader)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 704, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 811, in render_string
+    return t.generate(**namespace)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/template.py", line 278, in generate
+    return execute()
+  File "readermanage/viewreader_html.generated.py", line 45, in _tt_execute
+    _tt_tmp = book.value  # readermanage/viewreader.html:62
+AttributeError: 'dict' object has no attribute 'value'
+2015-09-07 20:48:15,413 -web:web.py-L1908-ERROR: 500 GET /readermanage?reader_id=4 (127.0.0.1) 139.76ms
+2015-09-07 20:49:37,145 -web:web.py-L1908-INFO: 200 GET /readermanage?reader_id=4 (127.0.0.1) 27.34ms
+2015-09-07 20:51:15,598 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=title&book=tornado (127.0.0.1) 29.68ms
+2015-09-07 20:51:19,833 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-07 20:51:19,837 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-07 20:51:19,864 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=5 (127.0.0.1) 57.27ms
+2015-09-07 20:52:09,656 -web:web.py-L1908-INFO: 304 GET /bookmanage?_se=title&book=python (127.0.0.1) 30.95ms
+2015-09-07 20:52:12,772 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:14,821 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:16,836 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:18,872 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:20,876 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:22,883 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:24,889 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:26,896 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:28,902 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:30,907 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:32,909 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: HTTP 500: Internal Server Error
+2015-09-07 20:52:32,909 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-07 20:52:32,912 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2 (127.0.0.1) 20428.82ms
+2015-09-07 20:52:32,928 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:34,936 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:36,940 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:38,949 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:40,955 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:42,961 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:44,968 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:46,995 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:49,025 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:51,057 -httpclient:httpclient.py-L46-ERROR: Exception : HTTP 500: Internal Server Error.  Retry!
+2015-09-07 20:52:53,073 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: HTTP 500: Internal Server Error
+2015-09-07 20:52:53,073 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-07 20:52:53,138 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2 (127.0.0.1) 20222.99ms
+2015-09-07 20:52:53,412 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=3 (127.0.0.1) 263.87ms
+2015-09-07 20:53:26,244 -web:web.py-L1908-INFO: 304 GET / (127.0.0.1) 1.45ms
+2015-09-07 20:53:27,191 -web:web.py-L1908-WARNING: 404 GET /favicon.ico (127.0.0.1) 0.90ms
+2015-09-07 20:53:32,631 -main:main.py-L32-INFO: receive data: username=asd&password=
+2015-09-07 20:53:32,632 -main:main.py-L35-INFO: user logging! username: asd, password: 
+2015-09-07 20:53:32,635 -web:web.py-L1908-INFO: 200 POST / (127.0.0.1) 5.15ms
+2015-09-07 20:53:43,662 -web:web.py-L1908-INFO: 304 GET /bookmanage?_se=title&book=python (127.0.0.1) 24.16ms
+2015-09-07 20:53:45,933 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=3 (127.0.0.1) 50.44ms
+                                                                                                                                                                                                                                                                                                                                                                                              

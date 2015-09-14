@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>add reader</title>
+	<link rel="stylesheet" type="text/css" href="/static/tor_back.css"/>
+</head>
+
+<body backcolor = pink>
+	<center>
+		<h1>add reader</h1>
+		<form name="f1" action="successadd.html" method="post">
+		
+		<table class="t1" border="1">
+			<tr>
+				<td>user name:</td>
+				<td><input type="text" name="username" id="username"></td>
+			<tr>
+				<td>password:</td>
+				<td><input type="password" name="password" id="password"></td>
+			</tr>
+			<tr>
+				<td>reader name:</td>
+				<td><input type="text" name="reader_name"></td>
+			</tr>
+			<tr>
+				<td>age:</td>
+				<td><input type="text" name="age"></td>
+			</tr>
+			<tr>
+				<td>sex:</td>
+				<td>
+					<select name="sex">
+						<option value="MAN">MAN</option>
+						<option value="WOMAN">WOMAN</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>email:</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="submit"></td>
+				
+			</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
+			
+				
+		

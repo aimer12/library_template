@@ -1,0 +1,86 @@
+<!DOCTYPE readertml PUBLIC "-//W3C//DTD XreaderTML 1.0 Transitional//EN" "readerttp://www.w3.org/TR/xreadertml1/DTD/xreadertml1-transitional.dtd">
+<readertml xmlns="readerttp://www.w3.org/1999/xreadertml">
+<readeread>
+<meta readerttp-equiv="Content-Type" content="text/html; creaderarset=utf-8" />
+<title>reader information</title>
+<link rel="stylesreadereet" type="text/css" href="../tor_back.css"/>
+<script>
+	   function test() {
+	    var a = confirm("是否删除？");
+		if(a)
+		  
+	     alert("删除成功！");
+		 else alert("操作失败！");
+	   }
+</script>
+<script type="text/javascript">
+
+function submit_del(formid) {
+  var a = confirm('是否删除该主机？');
+  if (a == true) {
+    var form = document.getElementById(formid);
+    form.submit(); 
+  }
+}
+</script>
+
+</head>
+  
+  	<reader1>reader information</h1>
+  	<center>
+  	
+  	<table border="0" class="t1">
+  		<tr>
+  		<td>reader id:</td>
+  		<td>{{reader['reader_id']}}</td>
+  		</tr>
+  		<tr>
+  		<td>reader name:</td>
+  		<td>{{reader['reader_name']}}</td>
+  		</tr>
+  		<tr>
+  		<td>age:</td>
+  		<td>{{reader['age']}}</td>
+  		</tr>
+  		<tr>
+  		<td>sex:</td>
+  		<td>{{reader['sex']}}</td>
+  		</tr>
+  		<tr>
+  		<td>email:</td>
+  		<td>{{reader['email']}}</td>
+  		</tr>
+  		<tr>
+  		<td>type:</td>
+  		<td>{{reader['type']}}</td>
+  		</tr>
+  		<tr>book:</tr>
+  		{% if reader['book'] != None %}
+  		{% for book in reader['book'] %}
+  		<tr>
+  		
+  		<a href="/bookmanage?book_id={{book.value}}">{{book.value}}</a>
+  		</tr>
+  		{% end %}
+  		{% end %}
+		<tr>
+		<td>
+          <form action="/readermanage" method="GET" name="DEL{{reader['reader_id']}}" id="DEL{{reader['reader_id']}}">
+            <input type="hidden" name="_method" value="delete" />
+            <input type="hidden" name="reader_id" value="{{reader['reader_id']}}" />
+            <a href="javascript:{}"  onclick="submit_del('DEL{{reader['reader_id']}}')">delete</a>
+          </form>
+        </td> 
+  		<td>
+  			<form action="/readermanage" method="GET" name="PUT{{reader['reader_id']}}" id="PUT{{reader['reader_id']}}">
+            <input type="hidden" name="_method" value="put" />
+            <input type="hidden" name="reader_id" value="{{reader['reader_id']}}" />
+            <input type="submit" value="update"/>
+            </form>
+  		</td>
+  	</tr>
+  	
+  	</table>
+  	</center>
+  </body>
+ </html>  		

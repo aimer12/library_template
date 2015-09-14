@@ -1,0 +1,362 @@
+2015-09-06 17:19:14,813 -web:web.py-L1496-ERROR: Uncaught exception GET /bookmanage?_se=title&book=python (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/bookmanage?_se=title&book=python', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Referer': 'http://127.1:9997/', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/bookmanage.py", line 88, in get
+    self.render("bookmanage/viewbooks.html", book = body)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 704, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 811, in render_string
+    return t.generate(**namespace)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/template.py", line 278, in generate
+    return execute()
+  File "bookmanage/viewbooks_html.generated.py", line 5, in _tt_execute
+    if books == None:  # bookmanage/viewbooks.html:19
+NameError: global name 'books' is not defined
+2015-09-06 17:19:14,818 -web:web.py-L1908-ERROR: 500 GET /bookmanage?_se=title&book=python (127.0.0.1) 116.46ms
+2015-09-06 17:20:34,334 -autoreload:autoreload.py-L204-INFO: /home/aimer/library_template/tor_manager/service/bookmanage.py modified; restarting server
+2015-09-06 17:20:34,662 -manager:manager.py-L79-INFO: Current log level is : DEBUG
+2015-09-06 17:20:34,664 -manager:manager.py-L143-INFO: Test info:SVC Manager start!
+2015-09-06 17:20:34,664 -manager:manager.py-L144-ERROR: Test error:SVC Manager start!
+2015-09-06 17:20:34,665 -manager:manager.py-L145-DEBUG: Test debug:SVC Manager start!
+2015-09-06 17:20:34,673 -manager:manager.py-L156-INFO: Begin listen to port: 9997!
+2015-09-06 17:20:44,250 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=title&book=python (127.0.0.1) 55.88ms
+2015-09-06 17:20:48,788 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:20:48,788 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:20:48,797 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=1 (127.0.0.1) 118.19ms
+2015-09-06 17:21:01,575 -web:web.py-L1908-INFO: 304 GET /?ori=book (127.0.0.1) 4.74ms
+2015-09-06 17:21:01,796 -web:web.py-L1908-INFO: 304 GET /?ori=book (127.0.0.1) 1.06ms
+2015-09-06 17:21:47,235 -bookmanage:bookmanage.py-L96-INFO: received post body: book_title=learn+python+the+hard+way&author=wang&publisher=min&addr=4-2-4&price=3.7&description=ok
+2015-09-06 17:21:47,315 -web:web.py-L1908-INFO: 302 POST /bookmanage (127.0.0.1) 81.60ms
+2015-09-06 17:21:47,336 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 0.71ms
+2015-09-06 17:21:47,465 -web:web.py-L1908-INFO: 304 GET /static/images/index.jpg (127.0.0.1) 62.27ms
+2015-09-06 17:21:50,490 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=title&book=python (127.0.0.1) 30.96ms
+2015-09-06 17:21:54,152 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:21:54,153 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:21:54,159 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2 (127.0.0.1) 24.28ms
+2015-09-06 17:23:03,417 -web:web.py-L1496-ERROR: Uncaught exception GET /bookmanage?_se=author&book=yin (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/bookmanage?_se=author&book=yin', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Referer': 'http://127.1:9997/', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/bookmanage.py", line 70, in get
+    if book_title != None:
+UnboundLocalError: local variable 'book_title' referenced before assignment
+2015-09-06 17:23:03,421 -web:web.py-L1908-ERROR: 500 GET /bookmanage?_se=author&book=yin (127.0.0.1) 4.55ms
+2015-09-06 17:24:54,023 -web:web.py-L1496-ERROR: Uncaught exception GET /bookmanage?_se=pubulisher&book=mingtian (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/bookmanage?_se=pubulisher&book=mingtian', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Referer': 'http://127.1:9997/', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/bookmanage.py", line 70, in get
+    if book_title != None:
+UnboundLocalError: local variable 'book_title' referenced before assignment
+2015-09-06 17:24:54,024 -web:web.py-L1908-ERROR: 500 GET /bookmanage?_se=pubulisher&book=mingtian (127.0.0.1) 1.66ms
+2015-09-06 17:27:11,681 -autoreload:autoreload.py-L204-INFO: /home/aimer/library_template/tor_manager/service/bookmanage.py modified; restarting server
+2015-09-06 17:27:11,886 -manager:manager.py-L79-INFO: Current log level is : DEBUG
+2015-09-06 17:27:11,886 -manager:manager.py-L143-INFO: Test info:SVC Manager start!
+2015-09-06 17:27:11,886 -manager:manager.py-L144-ERROR: Test error:SVC Manager start!
+2015-09-06 17:27:11,886 -manager:manager.py-L145-DEBUG: Test debug:SVC Manager start!
+2015-09-06 17:27:11,888 -manager:manager.py-L156-INFO: Begin listen to port: 9997!
+2015-09-06 17:27:19,627 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=pubulisher&book=python (127.0.0.1) 59.60ms
+2015-09-06 17:27:35,425 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=pubulisher&book=mingtian (127.0.0.1) 13.44ms
+2015-09-06 17:27:49,024 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=pubulisher&book=min (127.0.0.1) 77.09ms
+2015-09-06 17:28:00,488 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=author&book=wang (127.0.0.1) 36.37ms
+2015-09-06 17:28:08,105 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=author&book=python (127.0.0.1) 5.05ms
+2015-09-06 17:28:22,038 -web:web.py-L1908-INFO: 304 GET /bookmanage?_se=title&book=python (127.0.0.1) 30.22ms
+2015-09-06 17:29:26,134 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:29:26,136 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:29:26,143 -web:web.py-L1908-INFO: 304 GET /bookmanage?book_id=1 (127.0.0.1) 31.86ms
+2015-09-06 17:29:30,797 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:29:30,798 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:29:30,806 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 35.95ms
+2015-09-06 17:29:52,727 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:29:52,729 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:29:52,742 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 35.53ms
+2015-09-06 17:37:10,690 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:37:10,691 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:37:10,701 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 25.44ms
+2015-09-06 17:37:19,182 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:37:19,183 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:37:19,202 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 40.40ms
+2015-09-06 17:37:21,070 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:37:21,071 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:37:21,080 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 26.25ms
+2015-09-06 17:37:22,334 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:37:22,335 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:37:22,343 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 15.96ms
+2015-09-06 17:37:26,164 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:37:26,165 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:37:26,178 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 42.13ms
+2015-09-06 17:41:41,042 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 17:41:41,042 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 17:41:41,049 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 36.68ms
+2015-09-06 18:00:27,408 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:00:27,409 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:00:27,412 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 46.73ms
+2015-09-06 18:00:46,100 -web:web.py-L1908-WARNING: 405 GET /borrowmanage?bookid=1 (127.0.0.1) 17.09ms
+2015-09-06 18:00:59,211 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:00:59,212 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:00:59,226 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 20.26ms
+2015-09-06 18:01:10,808 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:01:10,818 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:01:10,832 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 56.75ms
+2015-09-06 18:04:59,880 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:04:59,881 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:04:59,902 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid= (127.0.0.1) 126.00ms
+2015-09-06 18:05:02,718 -web:web.py-L1496-ERROR: Uncaught exception GET /bookmanage?_method=delete&book_id=1&_method=put&book_id=1&bookid=1&readerid= (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/bookmanage?_method=delete&book_id=1&_method=put&book_id=1&bookid=1&readerid=', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Referer': 'http://127.1:9997/bookmanage?_method=delete&book_id=1&_method=update&book_id=1&bookid=1&readerid=', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/bookmanage.py", line 29, in get
+    self.render("bookmanage/update.html", book_id=book_id)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 704, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 808, in render_string
+    t = loader.load(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/template.py", line 343, in load
+    self.templates[name] = self._create_template(name)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/template.py", line 370, in _create_template
+    with open(path, "rb") as f:
+IOError: [Errno 2] No such file or directory: '/home/aimer/library_template/tor_manager/html/bookmanage/update.html'
+2015-09-06 18:05:02,727 -web:web.py-L1908-ERROR: 500 GET /bookmanage?_method=delete&book_id=1&_method=put&book_id=1&bookid=1&readerid= (127.0.0.1) 10.09ms
+2015-09-06 18:05:56,388 -autoreload:autoreload.py-L204-INFO: /home/aimer/library_template/tor_manager/service/bookmanage.py modified; restarting server
+2015-09-06 18:05:56,895 -manager:manager.py-L79-INFO: Current log level is : DEBUG
+2015-09-06 18:05:56,895 -manager:manager.py-L143-INFO: Test info:SVC Manager start!
+2015-09-06 18:05:56,895 -manager:manager.py-L144-ERROR: Test error:SVC Manager start!
+2015-09-06 18:05:56,896 -manager:manager.py-L145-DEBUG: Test debug:SVC Manager start!
+2015-09-06 18:05:56,899 -manager:manager.py-L156-INFO: Begin listen to port: 9997!
+2015-09-06 18:06:03,409 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=delete&book_id=1&_method=put&book_id=1&bookid=1&readerid= (127.0.0.1) 46.99ms
+2015-09-06 18:06:49,467 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:06:49,469 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:06:49,478 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=1&book_title=tornado&author=RQ&publisher=WS&price=3.2&description=forget (127.0.0.1) 22.28ms
+2015-09-06 18:07:29,393 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:07:29,393 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:07:29,410 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=1&book_title=tornado&author=RQ&publisher=WS&price=3.2&description=forget (127.0.0.1) 36.32ms
+2015-09-06 18:07:29,459 -web:web.py-L1908-INFO: 304 GET /static/tor_back.css (127.0.0.1) 2.65ms
+2015-09-06 18:08:32,385 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=delete&book_id=1&_method=put&book_id=1&bookid=1&readerid= (127.0.0.1) 6.37ms
+2015-09-06 18:19:27,859 -web:web.py-L1908-INFO: 304 GET / (127.0.0.1) 3.21ms
+2015-09-06 18:19:34,326 -main:main.py-L32-INFO: receive data: username=aierm&password=dfwae
+2015-09-06 18:19:34,326 -main:main.py-L35-INFO: user logging! username: aierm, password: dfwae
+2015-09-06 18:19:34,327 -web:web.py-L1908-INFO: 200 POST / (127.0.0.1) 1.26ms
+2015-09-06 18:19:45,190 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:19:45,191 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:19:45,192 -web:web.py-L1496-ERROR: Uncaught exception GET /readermanage?reader_id=1 (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/readermanage?reader_id=1', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Referer': 'http://127.1:9997/', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/readermanage.py", line 41, in get
+    failure_reason = resp.get('failure_reason', None)
+AttributeError: 'NoneType' object has no attribute 'get'
+2015-09-06 18:19:45,204 -web:web.py-L1908-ERROR: 500 GET /readermanage?reader_id=1 (127.0.0.1) 89.73ms
+2015-09-06 18:19:56,204 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:19:56,204 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:19:56,206 -web:web.py-L1908-INFO: 200 GET /readermanage?reader_id=2 (127.0.0.1) 110.39ms
+2015-09-06 18:20:45,027 -web:web.py-L1908-INFO: 200 GET /readermanage?_method=put&reader_id=2 (127.0.0.1) 3.70ms
+2015-09-06 18:20:57,821 -web:web.py-L1908-INFO: 302 GET /readermanage?_method=delete&reader_id=2 (127.0.0.1) 125.03ms
+2015-09-06 18:20:57,826 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 0.92ms
+2015-09-06 18:21:02,911 -main:main.py-L32-INFO: receive data: username=dfliea&password=dfae
+2015-09-06 18:21:02,912 -main:main.py-L35-INFO: user logging! username: dfliea, password: dfae
+2015-09-06 18:21:02,913 -web:web.py-L1908-INFO: 200 POST / (127.0.0.1) 2.56ms
+2015-09-06 18:21:05,501 -web:web.py-L1908-INFO: 304 GET /?ori=reader (127.0.0.1) 2.53ms
+2015-09-06 18:21:28,139 -readermanage:readermanage.py-L60-INFO: received post body: username=aimer&password=&reader_name=aimer&age=13&sex=WOMAN&email=aimer%40123.com
+2015-09-06 18:21:28,255 -web:web.py-L1908-INFO: 302 POST /readermanage (127.0.0.1) 118.82ms
+2015-09-06 18:21:28,281 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 1.12ms
+2015-09-06 18:21:33,941 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:21:33,942 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:21:33,951 -web:web.py-L1908-INFO: 200 GET /readermanage?reader_id=3 (127.0.0.1) 113.55ms
+2015-09-06 18:21:45,314 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:21:45,314 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:21:45,319 -web:web.py-L1908-INFO: 200 GET /readermanage?reader_id=4 (127.0.0.1) 75.79ms
+2015-09-06 18:26:07,487 -web:web.py-L1908-INFO: 304 GET /bookmanage?_se=title&book=python (127.0.0.1) 31.70ms
+2015-09-06 18:26:10,453 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:26:10,453 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:26:10,477 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2 (127.0.0.1) 53.70ms
+2015-09-06 18:26:14,539 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=delete&book_id=2&_method=put&book_id=2&bookid=2&readerid= (127.0.0.1) 2.16ms
+2015-09-06 18:44:10,817 -web:web.py-L1908-INFO: 304 GET / (127.0.0.1) 1.79ms
+2015-09-06 18:44:11,220 -web:web.py-L1908-WARNING: 404 GET /favicon.ico (127.0.0.1) 1.14ms
+2015-09-06 18:44:26,121 -main:main.py-L32-INFO: receive data: username=aimer&password=aimer
+2015-09-06 18:44:26,121 -main:main.py-L35-INFO: user logging! username: aimer, password: aimer
+2015-09-06 18:44:26,122 -web:web.py-L1908-INFO: 200 POST / (127.0.0.1) 1.56ms
+2015-09-06 18:45:33,924 -web:web.py-L1908-INFO: 304 GET /bookmanage?_se=title&book=python (127.0.0.1) 6.60ms
+2015-09-06 18:45:36,614 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:45:36,615 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:45:36,623 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=1 (127.0.0.1) 36.86ms
+2015-09-06 18:45:40,507 -web:web.py-L1908-INFO: 302 GET /bookmanage?_method=delete&book_id=1 (127.0.0.1) 467.65ms
+2015-09-06 18:45:40,525 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 0.99ms
+2015-09-06 18:46:42,955 -main:main.py-L32-INFO: receive data: username=aimer&password=aimer
+2015-09-06 18:46:42,955 -main:main.py-L35-INFO: user logging! username: aimer, password: aimer
+2015-09-06 18:46:42,956 -web:web.py-L1908-INFO: 200 POST / (127.0.0.1) 1.25ms
+2015-09-06 18:46:50,570 -web:web.py-L1908-INFO: 200 GET /bookmanage?_se=title&book=python (127.0.0.1) 27.76ms
+2015-09-06 18:46:53,612 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:46:53,615 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:46:53,628 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2 (127.0.0.1) 35.38ms
+2015-09-06 18:46:55,784 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 3.07ms
+2015-09-06 18:47:31,611 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 18:47:31,612 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 18:47:31,623 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2&book_title=i+love+&author=miss&publisher=how+to+know&price=3.7&description=enne (127.0.0.1) 26.42ms
+2015-09-06 18:56:59,444 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 11.13ms
+2015-09-06 18:59:42,213 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 4.91ms
+2015-09-06 19:01:31,017 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:01:31,019 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:01:31,025 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2&book_title=new+memory&author=kis&publisher=forg&price=3.4&description=fukkd (127.0.0.1) 28.74ms
+2015-09-06 19:04:48,404 -autoreload:autoreload.py-L204-INFO: /home/aimer/library_template/tor_manager/service/bookmanage.py modified; restarting server
+2015-09-06 19:04:48,653 -manager:manager.py-L79-INFO: Current log level is : DEBUG
+2015-09-06 19:04:48,654 -manager:manager.py-L143-INFO: Test info:SVC Manager start!
+2015-09-06 19:04:48,654 -manager:manager.py-L144-ERROR: Test error:SVC Manager start!
+2015-09-06 19:04:48,654 -manager:manager.py-L145-DEBUG: Test debug:SVC Manager start!
+2015-09-06 19:04:48,656 -manager:manager.py-L156-INFO: Begin listen to port: 9997!
+2015-09-06 19:04:56,117 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 14.43ms
+2015-09-06 19:05:21,176 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:05:21,179 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:05:21,204 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=forget&price=3.4&description=enne (127.0.0.1) 55.65ms
+2015-09-06 19:09:30,338 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:09:30,338 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:09:30,353 -web:web.py-L1908-INFO: 304 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=forget&price=3.4&description=enne (127.0.0.1) 83.76ms
+2015-09-06 19:09:30,436 -web:web.py-L1908-INFO: 304 GET /static/tor_back.css (127.0.0.1) 43.18ms
+2015-09-06 19:09:32,012 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:09:32,013 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:09:32,024 -web:web.py-L1908-INFO: 304 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=forget&price=3.4&description=enne (127.0.0.1) 65.80ms
+2015-09-06 19:09:32,066 -web:web.py-L1908-INFO: 304 GET /static/tor_back.css (127.0.0.1) 0.60ms
+2015-09-06 19:09:35,435 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 8.87ms
+2015-09-06 19:10:31,067 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:10:31,069 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:10:31,082 -web:web.py-L1908-INFO: 304 GET /bookmanage?book_id=2 (127.0.0.1) 22.40ms
+2015-09-06 19:10:35,019 -httpclient:httpclient.py-L101-ERROR: Response is not 'Success'! ErrorCode: 'NO_RECORD'. Info: 
+2015-09-06 19:10:35,027 -web:web.py-L1496-ERROR: Uncaught exception GET /bookmanage?book_id=3 (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/bookmanage?book_id=3', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/bookmanage.py", line 45, in get
+    for k,v in body.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+2015-09-06 19:10:35,031 -web:web.py-L1908-ERROR: 500 GET /bookmanage?book_id=3 (127.0.0.1) 31.08ms
+2015-09-06 19:10:38,258 -httpclient:httpclient.py-L101-ERROR: Response is not 'Success'! ErrorCode: 'NO_RECORD'. Info: 
+2015-09-06 19:10:38,259 -web:web.py-L1496-ERROR: Uncaught exception GET /bookmanage?book_id=1 (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/bookmanage?book_id=1', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'If-None-Match': '"f5ee4a1e8af4fbb2d4e3056a682bd3193492b178"', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/bookmanage.py", line 45, in get
+    for k,v in body.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+2015-09-06 19:10:38,260 -web:web.py-L1908-ERROR: 500 GET /bookmanage?book_id=1 (127.0.0.1) 4.58ms
+2015-09-06 19:10:44,150 -httpclient:httpclient.py-L101-ERROR: Response is not 'Success'! ErrorCode: 'NO_RECORD'. Info: 
+2015-09-06 19:10:44,154 -web:web.py-L1496-ERROR: Uncaught exception GET /bookmanage?book_id=3 (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/bookmanage?book_id=3', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Connection': 'keep-alive', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/bookmanage.py", line 45, in get
+    for k,v in body.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+2015-09-06 19:10:44,157 -web:web.py-L1908-ERROR: 500 GET /bookmanage?book_id=3 (127.0.0.1) 12.81ms
+2015-09-06 19:10:53,320 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 7.75ms
+2015-09-06 19:13:01,797 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 4.77ms
+2015-09-06 19:13:01,867 -web:web.py-L1908-INFO: 304 GET /static/tor_back.css (127.0.0.1) 0.67ms
+2015-09-06 19:13:16,807 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:13:16,807 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:13:16,816 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2&book_title=i+love&author=ddw&publisher=dwa&price=3.5&description=dfae (127.0.0.1) 24.29ms
+2015-09-06 19:20:30,924 -web:web.py-L1496-ERROR: Uncaught exception GET /bookmanage?_method=put&book_id=2 (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='GET', uri='/bookmanage?_method=put&book_id=2', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0', 'Connection': 'keep-alive', 'Referer': 'http://127.1:9997/bookmanage?book_id=2&book_title=i+love&author=ddw&publisher=dwa&price=3.5&description=dfae', 'If-None-Match': '"8f23b75c954e683b58e304818bae85a92b6d6ed6"'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/bookmanage.py", line 29, in get
+    self.render("bookmanage/updatebook.html", book_id=book_id)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 704, in render
+    html = self.render_string(template_name, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 811, in render_string
+    return t.generate(**namespace)
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/template.py", line 278, in generate
+    return execute()
+  File "bookmanage/updatebook_html.generated.py", line 5, in _tt_execute
+    _tt_tmp = book['book_id']  # bookmanage/updatebook.html:41
+NameError: global name 'book' is not defined
+2015-09-06 19:20:30,959 -web:web.py-L1908-ERROR: 500 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 38.13ms
+2015-09-06 19:22:05,912 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 3.76ms
+2015-09-06 19:22:29,783 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:22:29,783 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:22:29,791 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=forg&price=1.2&description=forget (127.0.0.1) 24.59ms
+2015-09-06 19:34:22,158 -autoreload:autoreload.py-L204-INFO: /home/aimer/library_template/tor_manager/service/bookmanage.py modified; restarting server
+2015-09-06 19:34:22,396 -manager:manager.py-L79-INFO: Current log level is : DEBUG
+2015-09-06 19:34:22,396 -manager:manager.py-L143-INFO: Test info:SVC Manager start!
+2015-09-06 19:34:22,396 -manager:manager.py-L144-ERROR: Test error:SVC Manager start!
+2015-09-06 19:34:22,396 -manager:manager.py-L145-DEBUG: Test debug:SVC Manager start!
+2015-09-06 19:34:22,409 -manager:manager.py-L156-INFO: Begin listen to port: 9997!
+2015-09-06 19:34:30,912 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:34:30,917 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:34:30,927 -web:web.py-L1908-INFO: 304 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=forg&price=1.2&description=forget (127.0.0.1) 26.52ms
+2015-09-06 19:34:31,004 -web:web.py-L1908-INFO: 304 GET /static/tor_back.css (127.0.0.1) 5.38ms
+2015-09-06 19:34:33,208 -web:web.py-L1908-INFO: 304 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 1.97ms
+2015-09-06 19:34:53,067 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:34:53,069 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:34:53,086 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=how+to+know&price=1.3&description=forget (127.0.0.1) 48.34ms
+2015-09-06 19:36:48,402 -autoreload:autoreload.py-L204-INFO: /home/aimer/library_template/tor_manager/service/bookmanage.py modified; restarting server
+2015-09-06 19:36:48,603 -manager:manager.py-L79-INFO: Current log level is : DEBUG
+2015-09-06 19:36:48,604 -manager:manager.py-L143-INFO: Test info:SVC Manager start!
+2015-09-06 19:36:48,604 -manager:manager.py-L144-ERROR: Test error:SVC Manager start!
+2015-09-06 19:36:48,604 -manager:manager.py-L145-DEBUG: Test debug:SVC Manager start!
+2015-09-06 19:36:48,605 -manager:manager.py-L156-INFO: Begin listen to port: 9997!
+2015-09-06 19:40:33,980 -web:web.py-L1908-INFO: 200 GET /bookmanage?_method=put&book_id=2 (127.0.0.1) 17.00ms
+2015-09-06 19:41:05,043 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:41:05,048 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:41:05,067 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=min&addr=4-2-4&price=1.2&description=forget (127.0.0.1) 43.89ms
+2015-09-06 19:47:38,820 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-06 19:47:38,821 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-06 19:47:38,831 -web:web.py-L1908-INFO: 304 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=min&addr=4-2-4&price=1.2&description=forget (127.0.0.1) 35.69ms
+2015-09-06 19:48:17,962 -borrowmanage:borrowmanage.py-L18-INFO: received post body: bookid=2&readerid=3
+2015-09-06 19:48:17,963 -web:web.py-L1496-ERROR: Uncaught exception POST /borrowmanage (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.1:9997', method='POST', uri='/borrowmanage', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Content-Length': '19', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.1:9997', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:38.0) Gecko/20100101 Firefox/38.0', 'Connection': 'keep-alive', 'Referer': 'http://127.1:9997/bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=min&addr=4-2-4&price=1.2&description=forget', 'Content-Type': 'application/x-www-form-urlencoded'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/tornado-4.2-py2.7-linux-i686.egg/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/aimer/library_template/tor_manager/service/borrowmanage.py", line 27, in post
+    resp = self.http_client.post(borrow)
+AttributeError: 'BorrowHandler' object has no attribute 'http_client'
+2015-09-06 19:48:17,973 -web:web.py-L1908-ERROR: 500 POST /borrowmanage (127.0.0.1) 12.44ms
+2015-09-06 19:50:09,107 -autoreload:autoreload.py-L204-INFO: /home/aimer/library_template/tor_manager/service/borrowmanage.py modified; restarting server
+2015-09-06 19:50:09,372 -manager:manager.py-L79-INFO: Current log level is : DEBUG
+2015-09-06 19:50:09,372 -manager:manager.py-L143-INFO: Test info:SVC Manager start!
+2015-09-06 19:50:09,372 -manager:manager.py-L144-ERROR: Test error:SVC Manager start!
+2015-09-06 19:50:09,373 -manager:manager.py-L145-DEBUG: Test debug:SVC Manager start!
+2015-09-06 19:50:09,376 -manager:manager.py-L156-INFO: Begin listen to port: 9997!
+2015-09-06 19:50:13,701 -borrowmanage:borrowmanage.py-L18-INFO: received post body: bookid=2&readerid=3
+2015-09-06 19:50:14,081 -web:web.py-L1908-INFO: 302 POST /borrowmanage (127.0.0.1) 385.94ms
+2015-09-06 19:50:14,088 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 2.18ms
+2015-09-06 19:50:52,105 -web:web.py-L1908-INFO: 200 GET /bookmanage?book_id=2&book_title=i+love&author=i+miss&publisher=min&addr=4-2-4&price=1.2&description=forget (127.0.0.1) 72.49ms
+2015-09-06 19:50:52,193 -web:web.py-L1908-INFO: 304 GET /static/tor_back.css (127.0.0.1) 3.68ms
+2015-09-06 19:51:14,560 -web:web.py-L1908-WARNING: 405 GET /borrowmanage?bookid=2 (127.0.0.1) 3.38ms
+2015-09-06 19:53:48,231 -web:web.py-L1908-WARNING: 405 GET /borrowmanage?bookid=2 (127.0.0.1) 1.80ms
+2015-09-06 20:01:08,419 -web:web.py-L1908-WARNING: 405 GET /borrowmanage?bookid=2 (127.0.0.1) 1.45ms
+2015-09-06 20:01:24,231 -web:web.py-L1908-WARNING: 405 GET /borrowmanage?bookid=2 (127.0.0.1) 1.80ms
+2015-09-06 20:01:37,405 -web:web.py-L1908-WARNING: 405 GET /borrowmanage?bookid=2 (127.0.0.1) 1.80ms
+2015-09-06 20:37:56,064 -manager:manager.py-L83-WARNING: Caught signal: 2
+2015-09-06 20:37:56,066 -manager:manager.py-L87-INFO: Stopping http server
+2015-09-06 20:37:56,068 -manager:manager.py-L90-INFO: SVC Manager will shutdown in 1 seconds ...
+2015-09-06 20:37:57,070 -manager:manager.py-L101-INFO: Shutdown
+2015-09-06 20:37:57,071 -manager:manager.py-L165-INFO: Exit SVC-Manager
+2015-09-07 18:30:26,128 -manager:manager.py-L79-INFO: Current log level is : DEBUG
+2015-09-07 18:30:26,128 -manager:manager.py-L143-INFO: Test info:SVC Manager start!
+2015-09-07 18:30:26,129 -manager:manager.py-L144-ERROR: Test error:SVC Manager start!
+2015-09-07 18:30:26,130 -manager:manager.py-L145-DEBUG: Test debug:SVC Manager start!
+2015-09-07 18:30:26,132 -manager:manager.py-L156-INFO: Begin listen to port: 9997!
+2015-09-07 18:32:38,933 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 9.02ms
+2015-09-07 18:32:39,154 -web:web.py-L1908-WARNING: 404 GET /favicon.ico (127.0.0.1) 1.32ms
+2015-09-07 18:34:08,105 -main:main.py-L32-INFO: receive data: username=aimer&password=aimer
+2015-09-07 18:34:08,105 -main:main.py-L35-INFO: user logging! username: aimer, password: aimer
+2015-09-07 18:34:08,108 -web:web.py-L1908-INFO: 200 POST / (127.0.0.1) 3.85ms
+2015-09-07 18:34:08,222 -web:web.py-L1908-INFO: 304 GET /static/images/banner.jpg (127.0.0.1) 2.66ms
+2015-09-07 18:34:08,227 -web:web.py-L1908-INFO: 304 GET /static/images/menu1.GIF (127.0.0.1) 1.78ms
+2015-09-07 20:32:20,034 -web:web.py-L1908-INFO: 304 GET /?ori=reader (127.0.0.1) 29.06ms
+2015-09-07 20:33:29,180 -readermanage:readermanage.py-L60-INFO: received post body: username=ysd&password=&reader_name=ysd&age=17&sex=MAN&email=ysd%40sd.com
+2015-09-07 20:33:30,121 -web:web.py-L1908-INFO: 302 POST /readermanage (127.0.0.1) 1043.49ms
+2015-09-07 20:33:30,125 -web:web.py-L1908-INFO: 200 GET / (127.0.0.1) 0.71ms
+2015-09-07 20:33:38,190 -httpclient:httpclient.py-L74-ERROR: In HttpClient get. Exception: Extra data: line 1 column 80 - line 1 column 239 (char 79 - 238)
+2015-09-07 20:33:38,190 -httpclient:httpclient.py-L96-ERROR: Get response failed! Some error ocurred!
+2015-09-07 20:33:38,193 -web:web.py-L1908-INFO: 200 GET /readermanage?reader_id=5 (127.0.0.1) 246.67ms
+2015-09-07 20:36:58,469 -web:web.py-L1908-INFO: 304 GET /?ori=book (127.0.0.1) 3.85ms
